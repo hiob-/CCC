@@ -25,6 +25,7 @@ import ui.internationalization.Strings;
 /**
  * CurrencyPair Detail View
  * 
+ * 
  * @author Oussama Zgheb
  * @version 1.0
  * */
