@@ -20,7 +20,9 @@ Please report bugs, ideas and even commit some code yourself.
 
 
 Donations are welcome:
+
 LTC  - LSsiGa4mc6Woi1VEHAGYkurJHYRMAjjSM4
+
 DOGE - DSWLdTQzvAuQjiuGGxkmZEt6pTszUv7rGJ
 
 
