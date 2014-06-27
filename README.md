@@ -5,7 +5,11 @@ CCC lets you follow the prices of multiple crypto currencies in (well nearly) re
 All the information is rendered in a Graph (work in progress) and in a table, no need having multiple browser tabs open anymore!
 You can also set trigger warnings, which will result in an Email or a Popup Alert.
 
+Screenshots are found here:
+https://github.com/hiob-/CCC/tree/master/CCC/screenshots   
+
 See builds for compiled Jars (tested with OSX 10.8 & Windows 8.1 & Ubuntu 13.10), no installation is required.
+https://github.com/hiob-/CCC/blob/master/CCC/builds/
 
 CCC is being developed by Luca Tännler, Diego Etter and Oussama Zgheb during the software engineering project 2 class (up to version 1.1) at the "Hochschule für Technik in Rapperswil" (Switzerland).
 
