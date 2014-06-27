@@ -23,9 +23,8 @@ public class Strings {
 
 	/**
 	 * 
-	 * @param PBUNDLE_NAME
-	 *            , example: _de_DE or _en_EN 
-	 *            Don't forget do loadResourceBundle() to change language
+	 * @param PBUNDLE_NAME, example: _de_DE or _en_EN 
+	 * Don't forget do loadResourceBundle() to change language
 	 */
 	public static void setLanguageName(String PBUNDLE_NAME) {
 		BUNDLE_NAME = BUNDLE_PATH + PBUNDLE_NAME;
@@ -33,7 +32,6 @@ public class Strings {
 
 	/**
 	 * Load the currently setLanguageName in the GUI 
-	 * 
 	 * @return True if Language was set, False if language wasn't found
 	 */
 	public static boolean loadLanguage() {
