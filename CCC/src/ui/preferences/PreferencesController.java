@@ -140,16 +140,18 @@ public class PreferencesController {
 				switch (combobox.getSelectedItem().toString()) {
 				case "German":
 					PreferencesHandler.setLanguage("_de_DE");
-					Strings.setLanguageName(PreferencesHandler.getLanguage());
 					break;
 				case "Deutsch":
 					PreferencesHandler.setLanguage("_de_DE");
 					break;	
 				case "English":
-					PreferencesHandler.setLanguage("");
+					PreferencesHandler.setLanguage("_en_EN");
 					break;
+				case "Englisch":
+					PreferencesHandler.setLanguage("_en_EN");
+					break;					
 				default:
-					PreferencesHandler.setLanguage("");
+					PreferencesHandler.setLanguage("_en_EN");
 					break;
 				}
 			}

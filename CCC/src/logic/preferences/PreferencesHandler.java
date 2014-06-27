@@ -97,7 +97,7 @@ public class PreferencesHandler extends Observable {
 
 	private static void setDefaults() {
 		preferencesIni = ini.add("Preferences");
-		setLanguage("");
+		setLanguage("_en_EN");
 		setDbPath("");
 		setUpdateInterval(5);
 		setEmailSender("CCC");	

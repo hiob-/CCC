@@ -70,7 +70,8 @@ public class Loader {
 		}
 		
 		Loader.loadValuesIntoCCC(PreferencesHandler.getDbPath(),PreferencesHandler.getUpdateInterval(),PreferencesHandler.getLanguage());
-
+		System.out.println(PreferencesHandler.getLanguage());
+		
 		// Start CurrencyPair Price Update Thread
 		if(!testMode){
 			runCryptsyUpdater();

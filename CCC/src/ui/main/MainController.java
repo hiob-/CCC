@@ -15,6 +15,7 @@ import java.util.Observer;
 import java.util.concurrent.ConcurrentHashMap;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -27,6 +28,7 @@ import model.ObserverObjectWrapper;
 import model.currency.CurrencyPair;
 import model.rule.Rule;
 import ui.ColorScheme;
+import ui.about.about;
 import ui.currencyPairDetail.CurrencyPairDetailViewController;
 import ui.currencyPairEdit.CurrencyPairEditController;
 import ui.internationalization.Strings;
@@ -48,6 +50,7 @@ public class MainController implements Observer {
 	private static RuleEditController ruleEditController;
 	private static RuleOverviewController ruleOverviewController;
 	private static PreferencesController preferencesController;
+	private static JFrame aboutFrame;
 
 	private static List<SubscribedCPButtonPair> subscribedCPButtonPairs;
 	private static CurrencyPair openCurrencyPair;
@@ -429,13 +432,11 @@ public class MainController implements Observer {
 
 		@Override
 		public void actionPerformed(final ActionEvent e) {
-			JOptionPane.showMessageDialog(null,
-				    "<html><h1>Coin Control Center</h1><br>" +
-				    "Written by: Oussama Zgheb, Luca T�nnler, Diego Etter<br>" +
-				    "Licence: TODO" +
-				    "</html>",  
-				    "CCC",
-				    JOptionPane.PLAIN_MESSAGE);
+			
+		    if(aboutFrame==null){
+		    	aboutFrame = new about();
+		    }
+		    aboutFrame.setVisible(true);
 			
 			printDebugMemoryUsage();
 		}

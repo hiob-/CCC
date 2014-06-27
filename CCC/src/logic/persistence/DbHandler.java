@@ -35,6 +35,7 @@ public class DbHandler {
 		
 		File dbFile = new File(DATABASE_URL.substring(DATABASE_URL.lastIndexOf(':') + 1));
 		if(!dbFile.exists()) {
+			Logger.write("[dbHandler] DB File doesn't exist!", LogLevel.info);
 			throw new IOException();
 		}
 		
