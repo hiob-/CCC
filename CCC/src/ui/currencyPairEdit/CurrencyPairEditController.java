@@ -1,6 +1,5 @@
 package ui.currencyPairEdit;
 
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -19,12 +18,11 @@ import model.Exchange;
 import model.currency.CCC_Currency;
 import model.currency.CurrencyPair;
 import ui.internationalization.Strings;
-import ui.main.MainController;
 
 /**
  * Controler for CurrencyPairEditView (UI)
  * 
- * @author Luca Tï¿½nnler
+ * @author Luca Tännler
  * @version 1.0
  * */
 public class CurrencyPairEditController {

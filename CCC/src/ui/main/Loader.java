@@ -93,10 +93,6 @@ public class Loader {
 				"BTC-E", "http://btc-e.com");
 		ExchangeController.getInstance().addToList(BTCE);
 		
-		final FAKE_EXCHANGE FAKE = new FAKE_Exchange_Implementation.FAKE_EXCHANGE(3,
-				"FAKE-EX", "http://hodor.com");
-		ExchangeController.getInstance().addToList(FAKE);
-		
 	}
 
 	private static void runCryptsyUpdater() {

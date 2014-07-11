@@ -4,11 +4,12 @@ import java.io.IOException;
 
 import logic.exchange.DisableCertCheck;
 import logic.exchange.HttpGet;
+import logic.preferences.PreferencesHandler;
 
 import org.junit.Before;
 import org.junit.Test;
 
-
+import ui.main.Loader;
 import static org.junit.Assert.*;
 
 /**
@@ -23,29 +24,29 @@ public class TestHTTPGetLive {
 	
 	@Before
 	public void disableCertCheck() throws Exception{
-		DisableCertCheck.doIt();
+		Loader.initLogging();
+		PreferencesHandler.init();
+		Loader.initAll(true);
 	}
 	
 	@Test
 	public void testGetHTTP() throws Exception{
-		String newLine = System.getProperty("line.separator");
-
 		int retCode=-1;
 		String retHTML="";
 		HttpGet a = new HttpGet();
 		try {
-			retHTML= a.getHTML("http://zgheb.com:80/static.html");
+			retHTML= a.getHTML("http://www.fsf.org/"); // ;)
 			retCode = a.getHTTPResponseCode();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		assertEquals(retCode, 200); 
-		assertEquals(retHTML,"<html>"+newLine+"	\"Static\" <br>"+newLine+"	Content"+newLine+"</html>");
+		assertTrue(retHTML.length()>5); // just check if we received something, hard to check since its dynamic
 	}
 	
 	
 	@Test
-	public void testGetHTTPS() throws Exception{
+	public void testGetHTTPS_BTCE() throws Exception{
 		String retHTML="";
 		HttpGet a = new HttpGet();
 		try {
@@ -53,7 +54,7 @@ public class TestHTTPGetLive {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		assertTrue(retHTML.length()>5); // just check if we received something, hard to check since its dynamic
+		assertTrue(retHTML.length()>5); 
 	}
 	
 

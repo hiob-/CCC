@@ -68,18 +68,17 @@ public class JsonParser {
 		
 		 // the first value has to be an extreme, for it to be overwritten
 		targetPrice = setDefaultTargetPrice(tagName, targetPrice);
-		
 		for (int i = 0; i < recenttradesARR.length(); ++i) {
 			JSONObject rec = recenttradesARR.getJSONObject(i);
 			tradedPrice = rec.getDouble("price");
 			targetPrice = updateTargetPrice(tagName, tradedPrice, targetPrice);
 		}
-		int numberOfOrderPositions=50; // FORM CRYPTSY API
-		return  (tagName.equals("avg")?(targetPrice/numberOfOrderPositions):(targetPrice));
+		return  (tagName.equals("avg")?(targetPrice/recenttradesARR.length()):(targetPrice));
 	}
 
 	private double updateTargetPrice(String tagName, double tradedPrice,
 			double targetPrice) {
+		
 		if (tagName.equals("high")) {
 			if (tradedPrice > targetPrice) {
 				targetPrice = tradedPrice;
@@ -89,7 +88,7 @@ public class JsonParser {
 				targetPrice = tradedPrice;
 			}
 		} else if (tagName.equals("avg")) {
-			targetPrice += tradedPrice;
+			return targetPrice + tradedPrice;
 		}
 		return targetPrice;
 	}

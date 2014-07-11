@@ -94,8 +94,6 @@ public class Cryptsy_Exchange_Implementation {
 			final HttpGet hG = new HttpGet();
 			retHTML = hG.getHTML(reqURL);				
 
-			// int retCode = hG.getHTTPResponseCode();
-
 			final List<PriceValues> pValList = new ArrayList<PriceValues>();
 			for (final ValueTag valueTag : getSupportedValueTags()) {
 				final JsonParser json = new JsonParser(retHTML);

@@ -97,12 +97,6 @@ public class CryptsyCurrencyPairUpdater {
 				currencyPairCollection.getAllCurrencyPairs(exchangeCollection
 						.getExchange("cryptsy")));
 
-		// For testing remove..
-
-		// currencyPairCollection.createCurrencyPair(
-		// currencyCollection.getCurrency(1),
-		// currencyCollection.getCurrency(1),
-		// exchangeCollection.getExchange("cryptsy"));
 
 		// Iterate through the 'fresh' CP-List received from Cryptsy
 		for (final String key : currencyPairResultMap.keySet()) {
