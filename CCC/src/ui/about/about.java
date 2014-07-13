@@ -113,7 +113,7 @@ public class about extends JFrame {
 		JButton btnBtcAddress = new JButton("BTC Address");
 		btnBtcAddress.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				copyToClip("TODO");
+				copyToClip("1BDVDRVnbamop74k2kZxLmbZNbLEmtshdU");
 			}
 		});
 		GridBagConstraints gbc_btnBtcAddress = new GridBagConstraints();
