@@ -12,7 +12,7 @@ See builds for compiled Jars (tested with OSX 10.8 & Windows 8.1 & Ubuntu 13.10)
 
 https://github.com/hiob-/CCC/blob/master/CCC/builds/
 
-CCC is being developed by Luca Tännler, Diego Etter and Oussama Zgheb during the software engineering project 2 class (up to version 1.1) at the "Hochschule für Technik in Rapperswil" (Switzerland).
+CCC is being developed by Luca Tännler, Diego Etter and OZ during the software engineering project 2 class (up to version 1.1) at the "Hochschule für Technik in Rapperswil" (Switzerland).
 
 The best thing, it’s completely free as in freedom, GPLv3!
 
